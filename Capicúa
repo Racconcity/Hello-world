@@ -1,0 +1,56 @@
+package capicua;
+import java.util.Scanner;
+
+public class Capicua {
+
+    public static void main(String[] args) {
+
+        int total = leer("¿Cuántos dígitos hay en total? ");
+        int[] vector = new int[total];
+        
+        llenarArray(vector);
+
+        mostrar(vector);
+
+        System.out.println(" "); //línea en blanco por estética
+
+        if (esCapicua(vector)) {
+            System.out.println("El número es capicua");
+        } else {
+            System.out.println("El número no es capicua");
+        }
+    }
+//***************************************************************************//
+    static int leer(String texto) {
+
+        int num;
+        Scanner entrada = new Scanner(System.in);
+        System.out.print(texto);
+        num = entrada.nextInt();
+        return num;
+    }
+//***************************************************************************//
+    private static void llenarArray(int[] vector) {
+        for (int i = 0; i < vector.length; i++) {
+            int tamano[];
+            tamano=vector;
+            
+            vector[i] = leer("Introduce el valor " + (i + 1) + ": ");
+        }    
+    }
+//***************************************************************************//
+    private static void mostrar(int[] vector) {
+        for (int i = 0; i < vector.length; i++) {
+            System.out.print(vector[i] + " ");
+        }
+    }
+//***************************************************************************//
+    private static boolean esCapicua(int[] numero) {
+        for (int i = 0; i < numero.length / 2; i++) {
+            if (numero[i] != numero[numero.length - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
