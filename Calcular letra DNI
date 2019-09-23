@@ -1,0 +1,24 @@
+package dni;
+import java.util.Scanner;
+
+public class Dni {
+
+    public static void main(String[] args){
+        int resto, dni;
+        char letra;
+        
+        Scanner entrada=new Scanner (System.in);
+        char array[]={'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
+        
+        System.out.print("DNI: ");
+        dni=entrada.nextInt();
+        
+        if (Integer.toString(dni).length()==8){//Pasa el numero a string y cuenta las posiciones
+            System.out.println("DNI correcto");
+            resto=dni%23;
+            letra=array[resto];//Guarda el resto (numero) y se mueve a la posicion del array que corresponda
+            System.out.println(dni+"-"+letra);
+        } else
+            System.out.println("DNI incorrecto");
+    }
+}
