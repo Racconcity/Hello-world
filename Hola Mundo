@@ -1,8 +1,5 @@
 package holamundo;
-/**
- *
- * @author user
- */
+
 public class HolaMundo {
 
     public static void main(String[] args) {
