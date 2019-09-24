@@ -1,0 +1,16 @@
+public class Comparar {
+    public static void main(String[] args) {
+        int n1, n2;
+        
+        n1=13;
+        n2=13;
+        
+        if(n1>n2){
+            System.out.println(n1+" es mayor que "+n2);
+        } else if(n1<n2){
+            System.out.println(n1+" es menor que "+n2);
+        } else {
+            System.out.println("Son iguales");
+        }
+    }
+}
