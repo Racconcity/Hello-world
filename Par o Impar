@@ -1,0 +1,17 @@
+public class Ejemplo2 {
+    public static void main(String[] args) {
+        int n1, n2;
+        int resto;
+        
+        n1=13;
+        n2=5;
+
+        resto=n1%2; //Tomamos el resto y comprobamos si es 0 o no
+        
+        if(resto==0) {
+            System.out.println(n1+" es par");
+        } else {
+            System.out.println(n1+" es impar");
+        }
+    }
+}
